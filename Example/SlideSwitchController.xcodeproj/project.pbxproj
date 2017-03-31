@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		069ABA5A1E8DFD1E00FCD5A6 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 069ABA531E8DFD1E00FCD5A6 /* .gitkeep */; };
+		069ABA5B1E8DFD1E00FCD5A6 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 069ABA551E8DFD1E00FCD5A6 /* .gitkeep */; };
+		069ABA5C1E8DFD1E00FCD5A6 /* SlideMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 069ABA571E8DFD1E00FCD5A6 /* SlideMenuView.m */; };
+		069ABA5D1E8DFD1E00FCD5A6 /* SlideSwitchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 069ABA591E8DFD1E00FCD5A6 /* SlideSwitchController.m */; };
+		069ABA611E8E1EF000FCD5A6 /* Sub1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 069ABA601E8E1EF000FCD5A6 /* Sub1ViewController.m */; };
+		069ABA641E8E1EFE00FCD5A6 /* Sub2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 069ABA631E8E1EFE00FCD5A6 /* Sub2ViewController.m */; };
+		069ABA671E8E1F1200FCD5A6 /* Sub3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 069ABA661E8E1F1200FCD5A6 /* Sub3ViewController.m */; };
+		069ABA6A1E8E1F3A00FCD5A6 /* Sub4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 069ABA691E8E1F3A00FCD5A6 /* Sub4ViewController.m */; };
+		069ABA6D1E8E1F9000FCD5A6 /* Sub5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 069ABA6C1E8E1F9000FCD5A6 /* Sub5ViewController.m */; };
 		503AAF55C24686ED0FB39D97 /* Pods_SlideSwitchController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF5559DF056F0A3931F8BCF /* Pods_SlideSwitchController_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -37,9 +46,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2B929E2218EF1C0A2BAB2109 /* SlideSwitchController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SlideSwitchController.podspec; path = ../SlideSwitchController.podspec; sourceTree = "<group>"; };
+		069ABA531E8DFD1E00FCD5A6 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		069ABA551E8DFD1E00FCD5A6 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		069ABA561E8DFD1E00FCD5A6 /* SlideMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideMenuView.h; sourceTree = "<group>"; };
+		069ABA571E8DFD1E00FCD5A6 /* SlideMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideMenuView.m; sourceTree = "<group>"; };
+		069ABA581E8DFD1E00FCD5A6 /* SlideSwitchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideSwitchController.h; sourceTree = "<group>"; };
+		069ABA591E8DFD1E00FCD5A6 /* SlideSwitchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideSwitchController.m; sourceTree = "<group>"; };
+		069ABA5F1E8E1EF000FCD5A6 /* Sub1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sub1ViewController.h; sourceTree = "<group>"; };
+		069ABA601E8E1EF000FCD5A6 /* Sub1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sub1ViewController.m; sourceTree = "<group>"; };
+		069ABA621E8E1EFD00FCD5A6 /* Sub2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sub2ViewController.h; sourceTree = "<group>"; };
+		069ABA631E8E1EFE00FCD5A6 /* Sub2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sub2ViewController.m; sourceTree = "<group>"; };
+		069ABA651E8E1F1200FCD5A6 /* Sub3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sub3ViewController.h; sourceTree = "<group>"; };
+		069ABA661E8E1F1200FCD5A6 /* Sub3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sub3ViewController.m; sourceTree = "<group>"; };
+		069ABA681E8E1F3A00FCD5A6 /* Sub4ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sub4ViewController.h; sourceTree = "<group>"; };
+		069ABA691E8E1F3A00FCD5A6 /* Sub4ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sub4ViewController.m; sourceTree = "<group>"; };
+		069ABA6B1E8E1F9000FCD5A6 /* Sub5ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sub5ViewController.h; sourceTree = "<group>"; };
+		069ABA6C1E8E1F9000FCD5A6 /* Sub5ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sub5ViewController.m; sourceTree = "<group>"; };
+		2B929E2218EF1C0A2BAB2109 /* SlideSwitchController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SlideSwitchController.podspec; path = ../SlideSwitchController.podspec; sourceTree = "<group>"; };
 		2C8FDF85FB365925285BDAA5 /* Pods-SlideSwitchController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideSwitchController_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SlideSwitchController_Tests/Pods-SlideSwitchController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		2CEF77A85AF89E730E7E2F32 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		2CEF77A85AF89E730E7E2F32 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		3BF26274E1942EDE26360D0F /* Pods-SlideSwitchController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideSwitchController_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SlideSwitchController_Tests/Pods-SlideSwitchController_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		59E2CDF0EE7109A06F35A9D1 /* Pods-SlideSwitchController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideSwitchController_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SlideSwitchController_Example/Pods-SlideSwitchController_Example.release.xcconfig"; sourceTree = "<group>"; };
 		5E4E8184E80C435E642DB11D /* Pods_SlideSwitchController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlideSwitchController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,7 +88,7 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		801A00B60642CF81522C8FA1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		801A00B60642CF81522C8FA1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFF5559DF056F0A3931F8BCF /* Pods_SlideSwitchController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlideSwitchController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF97DCC4E0F09ACDF8D22011 /* Pods-SlideSwitchController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideSwitchController_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SlideSwitchController_Example/Pods-SlideSwitchController_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -95,6 +120,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		069ABA511E8DFD1E00FCD5A6 /* SlideSwitchController */ = {
+			isa = PBXGroup;
+			children = (
+				069ABA521E8DFD1E00FCD5A6 /* Assets */,
+				069ABA541E8DFD1E00FCD5A6 /* Classes */,
+			);
+			name = SlideSwitchController;
+			path = ../../SlideSwitchController;
+			sourceTree = "<group>";
+		};
+		069ABA521E8DFD1E00FCD5A6 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				069ABA531E8DFD1E00FCD5A6 /* .gitkeep */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		069ABA541E8DFD1E00FCD5A6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				069ABA551E8DFD1E00FCD5A6 /* .gitkeep */,
+				069ABA561E8DFD1E00FCD5A6 /* SlideMenuView.h */,
+				069ABA571E8DFD1E00FCD5A6 /* SlideMenuView.m */,
+				069ABA581E8DFD1E00FCD5A6 /* SlideSwitchController.h */,
+				069ABA591E8DFD1E00FCD5A6 /* SlideSwitchController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		069ABA5E1E8E1EBC00FCD5A6 /* SubControllers */ = {
+			isa = PBXGroup;
+			children = (
+				069ABA5F1E8E1EF000FCD5A6 /* Sub1ViewController.h */,
+				069ABA601E8E1EF000FCD5A6 /* Sub1ViewController.m */,
+				069ABA621E8E1EFD00FCD5A6 /* Sub2ViewController.h */,
+				069ABA631E8E1EFE00FCD5A6 /* Sub2ViewController.m */,
+				069ABA651E8E1F1200FCD5A6 /* Sub3ViewController.h */,
+				069ABA661E8E1F1200FCD5A6 /* Sub3ViewController.m */,
+				069ABA681E8E1F3A00FCD5A6 /* Sub4ViewController.h */,
+				069ABA691E8E1F3A00FCD5A6 /* Sub4ViewController.m */,
+				069ABA6B1E8E1F9000FCD5A6 /* Sub5ViewController.h */,
+				069ABA6C1E8E1F9000FCD5A6 /* Sub5ViewController.m */,
+			);
+			path = SubControllers;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -132,11 +204,13 @@
 		6003F593195388D20070C39A /* Example for SlideSwitchController */ = {
 			isa = PBXGroup;
 			children = (
+				069ABA511E8DFD1E00FCD5A6 /* SlideSwitchController */,
 				6003F59C195388D20070C39A /* MMAppDelegate.h */,
 				6003F59D195388D20070C39A /* MMAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* MMViewController.h */,
 				6003F5A6195388D20070C39A /* MMViewController.m */,
+				069ABA5E1E8E1EBC00FCD5A6 /* SubControllers */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -281,6 +355,8 @@
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
+				069ABA5A1E8DFD1E00FCD5A6 /* .gitkeep in Resources */,
+				069ABA5B1E8DFD1E00FCD5A6 /* .gitkeep in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
@@ -395,8 +471,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* MMAppDelegate.m in Sources */,
+				069ABA611E8E1EF000FCD5A6 /* Sub1ViewController.m in Sources */,
+				069ABA5D1E8DFD1E00FCD5A6 /* SlideSwitchController.m in Sources */,
+				069ABA671E8E1F1200FCD5A6 /* Sub3ViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* MMViewController.m in Sources */,
+				069ABA641E8E1EFE00FCD5A6 /* Sub2ViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				069ABA5C1E8DFD1E00FCD5A6 /* SlideMenuView.m in Sources */,
+				069ABA6A1E8E1F3A00FCD5A6 /* Sub4ViewController.m in Sources */,
+				069ABA6D1E8E1F9000FCD5A6 /* Sub5ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

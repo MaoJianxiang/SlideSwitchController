@@ -1,0 +1,6 @@
+framework module SlideSwitchController {
+  umbrella header "SlideSwitchController-umbrella.h"
+
+  export *
+  module * { export * }
+}
