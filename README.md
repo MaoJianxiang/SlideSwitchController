@@ -6,7 +6,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/SlideSwitchController.svg?style=flat)](http://cocoapods.org/pods/SlideSwitchController)
 
 
-## 变更
+## 1.0.2 变更
 
  - 移除默认的标题灰色阴影效果，通过设置shadowColor阴影线颜色属性来添加阴影色的颜色效果。若不设置就没有效果
  @property (nonatomic, strong) UIColor *shadowColor;

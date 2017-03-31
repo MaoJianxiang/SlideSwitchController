@@ -52,6 +52,7 @@
     slidswitch.menuIndicatorColor = [UIColor redColor];
     slidswitch.menuItemTitleColor = [UIColor blackColor];
     slidswitch.menuItemSelectedTitleColor = [UIColor cyanColor];
+    slidswitch.shadowColor = [UIColor redColor];
 
     [self.view addSubview:slidswitch.view];
 

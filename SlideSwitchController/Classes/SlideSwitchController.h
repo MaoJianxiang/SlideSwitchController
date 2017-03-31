@@ -37,6 +37,8 @@
 @property (nonatomic, strong) UIColor *menuItemSelectedTitleColor;
 //指示器的颜色
 @property (nonatomic, strong) UIColor *menuIndicatorColor;
+//设置阴影线颜色
+@property (nonatomic, strong) UIColor *shadowColor;
 
 
 #pragma mark -- 私用Private
@@ -64,6 +66,4 @@
 //标题View
 @property(nonatomic,strong)SlideMenuView *menuView;
 
-//设置阴影线，默认是灰色
-- (void)setShadowView:(UIView *)lineView;
 @end

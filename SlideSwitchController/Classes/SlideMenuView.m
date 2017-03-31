@@ -137,24 +137,10 @@ static const CGFloat indicatorHeight = 2;
     
 }
 #pragma mark -- 设置标题下面的阴影线
-- (void)setShadowView:(UIView *)lineView{
-    // 如果之前有View,就将其删除
-    UIView *line = [self viewWithTag:300];
-    if (line) {
-        [line removeFromSuperview];
-    }
-    // 添加新的阴影
-    if (lineView) {
-      lineView.frame = CGRectMake(0, self.frame.size.height - 0.5, CGRectGetWidth(self.frame), 0.5);
-        lineView.tag = 300;
-      [self addSubview:lineView];
-    }else{
-        UIView *view = [[UIView alloc]init];
-        view.frame = CGRectMake(0, self.frame.size.height - 0.5, CGRectGetWidth(self.frame), 0.5);
-        view.tag = 300;
-        view.backgroundColor = [UIColor lightGrayColor];
+- (void)setShadowViewColor:(UIColor *)color{
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, self.frame.size.height - 0.5, CGRectGetWidth(self.frame), 0.5)];
+        view.backgroundColor = color;
         [self addSubview:view];
-    }
 }
 #pragma mark - 点击某个标题
 - (void)itemViewTapClick:(UITapGestureRecognizer *)tapGesture{

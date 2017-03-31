@@ -105,11 +105,6 @@
     self.view.backgroundColor = BGColor;
 }
 
-//设置阴影
-- (void)setShadowView:(UIView *)lineView{
-    [_menuView setShadowView:lineView];
-}
-
 
 #pragma mark --添加当前的View为子控制器
 - (void)setCurrentControllerIndex:(NSInteger)currentControllerIndex{
@@ -163,8 +158,10 @@
         _menuView.itemWith = self.menuItemWith;
     }
     _menuView.titles= self.titles;
+     if (_shadowColor) {
+        [_menuView setShadowViewColor:_shadowColor];
+     }
     [self.view addSubview:_menuView];
-    [_menuView setShadowView:nil];
 
     if (self.navigationController) {//兼容是否有导航栏
         CGFloat contentTop = 0;

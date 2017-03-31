@@ -46,7 +46,7 @@ typedef NS_ENUM(NSInteger,SMDirectionType) {
 - (void)adjustThePositionIndicatorWithNewIndex:(NSInteger)index;
 
 //设置阴影线
-- (void)setShadowView:(UIView *)lineView;
+- (void)setShadowViewColor:(UIColor *)color;
 
 
 @end
