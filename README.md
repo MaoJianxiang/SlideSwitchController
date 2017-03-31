@@ -5,6 +5,12 @@
 [![License](https://img.shields.io/cocoapods/l/SlideSwitchController.svg?style=flat)](http://cocoapods.org/pods/SlideSwitchController)
 [![Platform](https://img.shields.io/cocoapods/p/SlideSwitchController.svg?style=flat)](http://cocoapods.org/pods/SlideSwitchController)
 
+
+## 变更
+
+ - 移除默认的标题灰色阴影效果，通过设置shadowColor阴影线颜色属性来添加阴影色的颜色效果。若不设置就没有效果
+ @property (nonatomic, strong) UIColor *shadowColor;
+
 ## 简要
 
  - 这是一个实现标题选项选择和视图拖动切换视图控制器的文件，SlideSwitchController是主要是实现控制器，而且SlideMenuView是标题视图。
@@ -21,42 +27,41 @@
 ## 使用说明
 
  - 通过设置属性可以配置相关的属性来配置关相显示效果。
-
-    1.每个标题的宽度
-   @property(assign,nonatomic)CGFloat menuItemWith;
-    2.标题栏高度
-   @property(assign,nonatomic)CGFloat menuViewHight;
-    3.top高度,Navigation的高度可以自行调整
-   @property (nonatomic, assign) CGFloat topHeight;
-    4.tab高度
-   @property (nonatomic, assign) CGFloat tabHeight;
-    5.ScrollSlideController 背景颜色
-   @property (nonatomic, strong) UIColor *BGColor;
-    6.背景颜色
-    @property (nonatomic, strong) UIColor *menuBackGroudColor;
-    7.字体大小
-    @property (nonatomic, strong) UIFont  *menuItemFont;
-    8.字体的颜色
-    @property (nonatomic, strong) UIColor *menuItemTitleColor;
-    9.字体选中的颜色
-    @property (nonatomic, strong) UIColor *menuItemSelectedTitleColor;
-    10.指示器的颜色
-    @property (nonatomic, strong) UIColor *menuIndicatorColor;
+ 1.每个标题的宽度
+ @property(assign,nonatomic)CGFloat menuItemWith;
+ 2.标题栏高度
+ @property(assign,nonatomic)CGFloat menuViewHight;
+ 3.top高度,Navigation的高度可以自行调整
+ @property (nonatomic, assign) CGFloat topHeight;
+ 4.tab高度
+ @property (nonatomic, assign) CGFloat tabHeight;
+ 5.ScrollSlideController 背景颜色
+ @property (nonatomic, strong) UIColor *BGColor;
+ 6.背景颜色
+ @property (nonatomic, strong) UIColor *menuBackGroudColor;
+ 7.字体大小
+ @property (nonatomic, strong) UIFont  *menuItemFont;
+ 8.字体的颜色
+ @property (nonatomic, strong) UIColor *menuItemTitleColor;
+ 9.字体选中的颜色
+ @property (nonatomic, strong) UIColor *menuItemSelectedTitleColor;
+ 10.指示器的颜色
+ @property (nonatomic, strong) UIColor *menuIndicatorColor;
  
  - 获取当前相关信息
-
-   1.标题数组
-   @property (nonatomic, strong, readonly) NSMutableArray *titles;
-   2.控制器
-   @property (nonatomic, strong, readonly) NSMutableArray *controllers;
-   3.内容ScrollView
-   @property (nonatomic, strong, readonly) UIScrollView *contentScrollView;
-   4.当前是第几个控制器，从0开始的
-   @property (nonatomic, assign, readonly) NSInteger currentControllerIndex;
-   5.当前控制器
-   @property (nonatomic, strong, readonly) UIViewController *currentController;
-   6.标题View
-   @property(nonatomic,strong)SlideMenuView *menuView;
+ 
+ 1.标题数组
+ @property (nonatomic, strong, readonly) NSMutableArray *titles;
+ 2.控制器
+ @property (nonatomic, strong, readonly) NSMutableArray *controllers;
+ 3.内容ScrollView
+ @property (nonatomic, strong, readonly) UIScrollView *contentScrollView;
+ 4.当前是第几个控制器，从0开始的
+ @property (nonatomic, assign, readonly) NSInteger currentControllerIndex;
+ 5.当前控制器
+ @property (nonatomic, strong, readonly) UIViewController *currentController;
+ 6.标题View
+ @property(nonatomic,strong)SlideMenuView *menuView;
 
  - 标题栏上加一小横线
 
@@ -65,42 +70,46 @@
 ## 实例
 
    - 实例化五个视图控制器
-    
-     Sub1ViewController *sub1 = [[Sub1ViewController alloc] init];
-     Sub2ViewController *sub2 = [[Sub2ViewController alloc] init];
-     Sub3ViewController *sub3 = [[Sub3ViewController alloc] init];
-     Sub4ViewController *sub4 = [[Sub4ViewController alloc] init];
-     Sub5ViewController *sub5 = [[Sub5ViewController alloc] init];
-     NSArray *controllers = @[sub1,sub2,sub3,sub4,sub5];
+   
+   Sub1ViewController *sub1 = [[Sub1ViewController alloc] init];
+   Sub2ViewController *sub2 = [[Sub2ViewController alloc] init];
+   Sub3ViewController *sub3 = [[Sub3ViewController alloc] init];
+   Sub4ViewController *sub4 = [[Sub4ViewController alloc] init];
+   Sub5ViewController *sub5 = [[Sub5ViewController alloc] init];
+   NSArray *controllers = @[sub1,sub2,sub3,sub4,sub5];
 
-   - 加载显示：
 
-     方式1:
+- 加载显示：
 
-     NSArray *titles = @[@"标题1",@"标题2",@"标题3",@"标题4",@"标题5"];
-     SlideSwitchController *slidswitch = [[SlideSwitchController alloc] initWithControllers:controllers titles:titles parentController:self];
-     [self.view addSubview:slidswitch.view];
+方式1:
 
-     方式2: 若不传titles,则设置子视图控制器的title。
+NSArray *titles = @[@"标题1",@"标题2",@"标题3",@"标题4",@"标题5"];
+SlideSwitchController *slidswitch = [[SlideSwitchController alloc] initWithControllers:controllers titles:titles parentController:self];[self.view addSubview:slidswitch.view];
 
-       sub1.title = @"标题1";
-       sub2.title = @"标题2";
-       sub3.title = @"标题3";
-       sub4.title = @"标题4";
-       sub5.title = @"标题5";
 
-     SlideSwitchController *slidswitch = [[SlideSwitchController alloc] initWithControllers:controllers titles:nil parentController:self];
+方式2: 若不传titles,则设置子视图控制器的title。
 
-    /*每个标题为100，这样标题栏的宽度就不会平分整个屏幕的宽度,可去拖动选择标题*/
-     slidswitch.menuItemWith = 100;
+sub1.title = @"标题1";
+sub2.title = @"标题2";
+sub3.title = @"标题3";
+sub4.title = @"标题4";
+sub5.title = @"标题5";
 
-     /*配置标题的相关参数*/
-     slidswitch.menuBackGroudColor = [UIColor lightGrayColor];
-     slidswitch.menuIndicatorColor = [UIColor redColor];
-     slidswitch.menuItemTitleColor = [UIColor blackColor];
-     slidswitch.menuItemSelectedTitleColor = [UIColor cyanColor];
 
-     [self.view addSubview:slidswitch.view];
+SlideSwitchController *slidswitch = [[SlideSwitchController alloc] initWithControllers:controllers titles:nil parentController:self];
+
+
+/*每个标题为100，这样标题栏的宽度就不会平分整个屏幕的宽度,可去拖动选择标题*/
+slidswitch.menuItemWith = 100;
+
+
+/*配置标题的相关参数*/
+slidswitch.menuBackGroudColor = [UIColor lightGrayColor];
+slidswitch.menuIndicatorColor = [UIColor redColor];
+slidswitch.menuItemTitleColor = [UIColor blackColor];
+slidswitch.menuItemSelectedTitleColor = [UIColor cyanColor];
+
+[self.view addSubview:slidswitch.view];
 
 ```ruby
 pod "SlideSwitchController"
