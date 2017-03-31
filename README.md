@@ -27,8 +27,7 @@
 ## 使用说明
 
  - 通过设置属性可以配置相关的属性来配置关相显示效果。
- 1.每个标题的宽度
- @property(assign,nonatomic)CGFloat menuItemWith;
+ ###1.每个标题的宽度\n@property(assign,nonatomic)CGFloat menuItemWith;
  2.标题栏高度
  @property(assign,nonatomic)CGFloat menuViewHight;
  3.top高度,Navigation的高度可以自行调整
