@@ -195,7 +195,8 @@
             [_contentScrollView addSubview:controller.view];
         }
     }
-      _currentControllerIndex = 0;
+    
+    self.currentControllerIndex=0;
 }
 
 #pragma mark - MenuViewDelegate 更新界面

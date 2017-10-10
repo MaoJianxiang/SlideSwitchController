@@ -1,123 +1,83 @@
-# SlideSwitchController
+# SideScrollControllers
 
-[![CI Status](http://img.shields.io/travis/15208105440@163.com/SlideSwitchController.svg?style=flat)](https://travis-ci.org/15208105440@163.com/SlideSwitchController)
-[![Version](https://img.shields.io/cocoapods/v/SlideSwitchController.svg?style=flat)](http://cocoapods.org/pods/SlideSwitchController)
-[![License](https://img.shields.io/cocoapods/l/SlideSwitchController.svg?style=flat)](http://cocoapods.org/pods/SlideSwitchController)
-[![Platform](https://img.shields.io/cocoapods/p/SlideSwitchController.svg?style=flat)](http://cocoapods.org/pods/SlideSwitchController)
-
-
-## 1.0.2 变更
-
- - 移除默认的标题灰色阴影效果，通过设置shadowColor阴影线颜色属性来添加阴影色的颜色效果。若不设置就没有效果
- @property (nonatomic, strong) UIColor *shadowColor;
-
-## 简要
-
- - 这是一个实现标题选项选择和视图拖动切换视图控制器的文件，SlideSwitchController是主要是实现控制器，而且SlideMenuView是标题视图。
-
- - SlideSwitchController已经处理了导航栏推出，导航栏隐藏，无导航栏的情况下视图控制器的显示问题。若要再单独调整位置，可以再设置topHeight的属性。但是要注意的是在使用子视图控制器中，view.center在显示时不是在View的中心，也不是在屏幕中心，所以要根据情况调整frame.
-
- -  SlideMenuView标题视图，在子视图控制器为3个(包含)以下时，以及未设置标题宽度(menuItemWith)属性时，都会以标题全屏平分标题处理。
-
- -  SlideMenuView标题视图，在子视图控制器为多个情况下，可以固定每个标题宽度，设置SlideSwitchController的属性menuItemWith属性即可实现。标题的宽度不低于45，设置时低于了45,会以45的宽度加载。
-
- -  通过设置SlideSwitchController的标题栏高度属性menuViewHight，可以调整SlideMenuView标题视图的高度。
+[![CI Status](http://img.shields.io/travis/15208105440@163.com/SideScrollControllers.svg?style=flat)](https://travis-ci.org/15208105440@163.com/SideScrollControllers)
+[![Version](https://img.shields.io/cocoapods/v/SideScrollControllers.svg?style=flat)](http://cocoapods.org/pods/SideScrollControllers)
+[![License](https://img.shields.io/cocoapods/l/SideScrollControllers.svg?style=flat)](http://cocoapods.org/pods/SideScrollControllers)
+[![Platform](https://img.shields.io/cocoapods/p/SideScrollControllers.svg?style=flat)](http://cocoapods.org/pods/SideScrollControllers)
 
 
-## 使用说明
+## 版本 1.0.3
 
- - 通过设置属性可以配置相关的属性来配置关相显示效果。
- 1.每个标题的宽度\n@property(assign,nonatomic)CGFloat menuItemWith;
- 2.标题栏高度
- @property(assign,nonatomic)CGFloat menuViewHight;
- 3.top高度,Navigation的高度可以自行调整
- @property (nonatomic, assign) CGFloat topHeight;
- 4.tab高度
- @property (nonatomic, assign) CGFloat tabHeight;
- 5.ScrollSlideController 背景颜色
- @property (nonatomic, strong) UIColor *BGColor;
- 6.背景颜色
- @property (nonatomic, strong) UIColor *menuBackGroudColor;
- 7.字体大小
- @property (nonatomic, strong) UIFont  *menuItemFont;
- 8.字体的颜色
- @property (nonatomic, strong) UIColor *menuItemTitleColor;
- 9.字体选中的颜色
- @property (nonatomic, strong) UIColor *menuItemSelectedTitleColor;
- 10.指示器的颜色
- @property (nonatomic, strong) UIColor *menuIndicatorColor;
+ 修复初次进入第一个控制器中，第一个视图控制器无点击响应事件的BUG！
+
+##  版本 1.0.2
+
+## 说明
+
+ SSTitleView是标题栏，可以单独进行配置。而侧滑是由PageViewController来完成的。
+
+
+## 用法
+  
+1.可以先预先配置好标题titles和控制器controllers，它们可以通过属性赋值。
+    
+     @property (nonatomic, strong) NSArray *titles;
+     @property(strong,nonatomic)NSArray *controllers;
+    
+  再生成控制器:
+     /*
+     *isModal: 是否是模态推出，可以传nil 默认是导航栏推出
+     *height:自定义高度，如果不传或者小于50都会默认为50
+     */
+    - (void)initializeViewControllerTitleHeight:(CGFloat)height present:(BOOL)isModal;
+
+2.直接生成控制器
  
- - 获取当前相关信息
+   /*
+    *titles: 需要传入标题数组
+    *controllers:需要传入控制器数组
+    */
+  - (instancetype)initViewContollreWithTitles:(NSArray *)titles controllers:(NSArray *)controllers TitleHeight:(CGFloat)height present:(BOOL)isModal;
+
+3.配置显示的颜色
  
- 1.标题数组
- @property (nonatomic, strong, readonly) NSMutableArray *titles;
- 2.控制器
- @property (nonatomic, strong, readonly) NSMutableArray *controllers;
- 3.内容ScrollView
- @property (nonatomic, strong, readonly) UIScrollView *contentScrollView;
- 4.当前是第几个控制器，从0开始的
- @property (nonatomic, assign, readonly) NSInteger currentControllerIndex;
- 5.当前控制器
- @property (nonatomic, strong, readonly) UIViewController *currentController;
- 6.标题View
- @property(nonatomic,strong)SlideMenuView *menuView;
+   /*配置颜色 默认：背景为白色，字体normal:为灰色，字体选中Selected:黑色，滑动条颜色黑色。
+    *bgColor:背景颜色
+    *normalColor:标题颜色
+    *seletedColor:标题选中颜色
+    *slideColor滑动条颜色，传nil时会默认和标题选中颜色一致
+    */
+   - (void)updateBackgroundColor:(UIColor *)bgColor  fontNormalColor:(UIColor *)normalColor fontSeletedColor:(UIColor *)seletedColor slideColor:(UIColor *)slideColor;
 
- - 标题栏上加一小横线
+## 例如
 
-     方法：- (void)setShadowView:(UIView *)lineView;
-   
-## 实例
+ 1.初始化两个子视图控制器
 
-   - 实例化五个视图控制器
-   
-   Sub1ViewController *sub1 = [[Sub1ViewController alloc] init];
-   Sub2ViewController *sub2 = [[Sub2ViewController alloc] init];
-   Sub3ViewController *sub3 = [[Sub3ViewController alloc] init];
-   Sub4ViewController *sub4 = [[Sub4ViewController alloc] init];
-   Sub5ViewController *sub5 = [[Sub5ViewController alloc] init];
-   NSArray *controllers = @[sub1,sub2,sub3,sub4,sub5];
+   Slide1ViewController *slide1 = [[Slide1ViewController alloc]init];
+   Slide2ViewController *slide2 = [[Slide2ViewController alloc] init];
 
+ 2.初始化SideScrollViewController
 
-- 加载显示：
+   //present:YES 模态推出
+   SideScrollViewController *sideScorllController = [[SideScrollViewController alloc] initViewContollreWithTitles:@[@"销售管理",@"明天管理"] controllers:@[slide1,slide2] TitleHeight:0 present:YES];
 
-方式1:
+ 3. 配置颜色
 
-NSArray *titles = @[@"标题1",@"标题2",@"标题3",@"标题4",@"标题5"];
-SlideSwitchController *slidswitch = [[SlideSwitchController alloc] initWithControllers:controllers titles:titles parentController:self];[self.view addSubview:slidswitch.view];
+  [sideScorllController updateBackgroundColor:[UIColor colorWithRed:200 green:200 blue:200 alpha:1] fontNormalColor:[UIColor yellowColor] fontSeletedColor:[UIColor brownColor] slideColor:[UIColor  blackColor]];
+
+ 4. 推出控制器
+  [self presentViewController:sideScorllController animated:YES completion:nil];
 
 
-方式2: 若不传titles,则设置子视图控制器的title。
-
-sub1.title = @"标题1";
-sub2.title = @"标题2";
-sub3.title = @"标题3";
-sub4.title = @"标题4";
-sub5.title = @"标题5";
-
-
-SlideSwitchController *slidswitch = [[SlideSwitchController alloc] initWithControllers:controllers titles:nil parentController:self];
-
-
-/*每个标题为100，这样标题栏的宽度就不会平分整个屏幕的宽度,可去拖动选择标题*/
-slidswitch.menuItemWith = 100;
-
-
-/*配置标题的相关参数*/
-slidswitch.menuBackGroudColor = [UIColor lightGrayColor];
-slidswitch.menuIndicatorColor = [UIColor redColor];
-slidswitch.menuItemTitleColor = [UIColor blackColor];
-slidswitch.menuItemSelectedTitleColor = [UIColor cyanColor];
-
-[self.view addSubview:slidswitch.view];
 
 ```ruby
-pod "SlideSwitchController"
+pod "SideScrollControllers"
 ```
 
 ## Author
 
- 毛建祥, 15208105440@163.com
+毛建祥, 15208105440@163.com
 
 ## License
 
-SlideSwitchController is available under the MIT license. See the LICENSE file for more info.
+SideScrollControllers is available under the MIT license. See the LICENSE file for more info.

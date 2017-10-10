@@ -180,7 +180,7 @@ static const CGFloat indicatorHeight = 2;
     CGRect tagartFrame = currentFrame;
     tagartFrame.origin.x = tagartLabel.frame.origin.x;
 
-    [UIView animateWithDuration:0.15 animations:^{
+    [UIView animateWithDuration:0.12 animations:^{
         self.indicatorView.frame = tagartFrame;
     } completion:^(BOOL finished) {
         if (self.itemWith && self.itemWith>=45) {

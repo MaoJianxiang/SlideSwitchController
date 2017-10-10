@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SlideSwitchController'
-  s.version          = '1.0.2'
+  s.version          = '1.0.3'
   s.summary          = 'This is a repository file to handle slide switch view controller.'
 
 # This description is used to generate tags and improve search results.
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Mao Jianxiang' => '15208105440@163.com' }
-  s.source           = { :git => 'https://github.com/MaoJianxiang/SlideSwitchController.git', :tag => '1.0.2' }
+  s.source           = { :git => 'https://github.com/MaoJianxiang/SlideSwitchController.git', :tag => '1.0.3' }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
