@@ -144,15 +144,17 @@ static const CGFloat indicatorHeight = 2;
 }
 #pragma mark - 点击某个标题
 - (void)itemViewTapClick:(UITapGestureRecognizer *)tapGesture{
-    //只要有点击,马上执行动画，把交互关闭
-    self.userInteractionEnabled = NO;
-    self.superview.userInteractionEnabled = NO;
-
+    
     UILabel *label = (UILabel *)[tapGesture view];
     NSInteger index = label.tag - 200;
     if (self.currentIndex == index) {
         return ;
     }
+    
+    //只要有点击,马上执行动画，把交互关闭
+    self.userInteractionEnabled = NO;
+    self.superview.userInteractionEnabled = NO;
+    
     [self adjustThePositionIndicatorWithNewIndex:index];
     if (self.delegate && [self.delegate respondsToSelector:@selector(scrollMenuViewSelectedIndex:)]) {
         [self.delegate scrollMenuViewSelectedIndex:index];

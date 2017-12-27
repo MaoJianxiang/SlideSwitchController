@@ -6,6 +6,12 @@
 [![Platform](https://img.shields.io/cocoapods/p/SideScrollControllers.svg?style=flat)](http://cocoapods.org/pods/SideScrollControllers)
 
 
+## 版本 1.0.4
+
+ 修复连续点击同一个标题会失去交互事件的BUG.
+
+***
+
 ## 版本 1.0.3
 
  修复初次进入第一个控制器中，第一个视图控制器无点击响应事件的BUG！

@@ -44,7 +44,6 @@
         _controllers = [controllers mutableCopy];
         //处理标题数组
         [self handleTitles:titles withControllers:controllers];
-
     }
     return self;
 }
