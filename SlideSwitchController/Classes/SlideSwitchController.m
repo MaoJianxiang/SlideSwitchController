@@ -88,10 +88,11 @@
 //标题栏高度
 - (CGFloat)menuViewHight{
     if (!_menuViewHight) {
-        _menuViewHight = 40;
-    }
-    if (_menuViewHight < 40) {
-        _menuViewHight = 40;
+         if (self.controllers.count > 1) {
+            _menuViewHight = 40;
+        }else{
+            _menuViewHight = 0;
+        }
     }
     return _menuViewHight;
 }
