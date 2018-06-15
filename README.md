@@ -6,6 +6,10 @@
 [![Platform](https://img.shields.io/cocoapods/p/SideScrollControllers.svg?style=flat)](http://cocoapods.org/pods/SideScrollControllers)
 
 
+## 版本 1.0.5
+
+   修复当子控制器只有一个时，隐藏标题选择栏.
+
 ## 版本 1.0.4
 
  修复连续点击同一个标题会失去交互事件的BUG.
